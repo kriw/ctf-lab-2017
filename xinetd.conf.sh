@@ -9,6 +9,7 @@ do
     echo service $name
     echo {
     echo     disable  = no
+    echo     wait     = no
     echo     protocol = tcp
     echo     user     = $name
     echo     bind     = 0.0.0.0
