@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 #include <unistd.h>
-#include <stdlib.h>
+
+char *msg = "Input: ";
 
 int main() {
     char buf[0x20];
-    system("echo Input Message");
+    write(1, msg, strlen(msg));
     read(0, buf, 0x100);
-    puts(buf);
     return 0;
 }

@@ -10,7 +10,7 @@ echo EXPOSE 1000-1020 >> $dockerfile
 echo RUN apt-get update >> $dockerfile
 echo RUN apt-get install -y xinetd >> $dockerfile
 
-for _name in $(find ./ -name a.out | cut -d'/' -f2-3)
+for _name in $(find ./ -name a.out | grev -v handson | cut -d'/' -f2-3)
 do
     name=$(echo $_name | sed 's/\//_/')
     echo RUN mkdir -p /home/$name >> $dockerfile
