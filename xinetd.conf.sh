@@ -4,7 +4,7 @@ echo {
 echo }
 
 i=1000
-for name in $(find ./ -name a.out | cut -d'/' -f2-3 | sed 's/\//_/')
+for name in $(find ./lab* -name a.out | cut -d'/' -f2-3 | sed 's/\//_/')
 do
     echo service $name
     echo {
